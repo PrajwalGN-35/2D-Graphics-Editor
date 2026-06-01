@@ -75,3 +75,32 @@ int x3,int y3)
     drawLine(x2,y2,x3,y3);
     drawLine(x3,y3,x1,y1);
 }
+void drawCircle(int xc,int yc,int r)
+{
+    int x=0;
+    int y=r;
+    int d=1-r;
+
+    while(x<=y)
+    {
+        putPixel(xc+x,yc+y);
+        putPixel(xc-x,yc+y);
+        putPixel(xc+x,yc-y);
+        putPixel(xc-x,yc-y);
+
+        putPixel(xc+y,yc+x);
+        putPixel(xc-y,yc+x);
+        putPixel(xc+y,yc-x);
+        putPixel(xc-y,yc-x);
+
+        if(d<0)
+            d+=2*x+3;
+        else
+        {
+            d+=2*(x-y)+5;
+            y--;
+        }
+
+        x++;
+    }
+}
