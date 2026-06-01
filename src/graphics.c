@@ -104,3 +104,88 @@ void drawCircle(int xc,int yc,int r)
         x++;
     }
 }
+Shape objects[MAX_OBJECTS];
+int objectCount = 0;
+void addObject(Shape s)
+{
+    if(objectCount < MAX_OBJECTS)
+   
+    {
+        objects[objectCount++] = s;
+    }
+}
+void deleteObject(int id)
+{
+    for(int i=0;i<objectCount;i++)
+    {
+        if(objects[i].id == id)
+        {
+            for(int j=i;j<objectCount-1;j++)
+            {
+                objects[j] = objects[j+1];
+            }
+
+            objectCount--;
+            break;
+        }
+    }
+
+    redrawScene();
+}
+void modifyObject(int id)
+{
+    for(int i=0;i<objectCount;i++)
+    {
+        if(objects[i].id == id)
+        {
+            printf("Enter new x1 y1 x2 y2 : ");
+
+            scanf("%d%d%d%d",
+                  &objects[i].x1,
+                  &objects[i].y1,
+                  &objects[i].x2,
+                  &objects[i].y2);
+
+            break;
+        }
+    }
+
+    redrawScene();
+}
+void redrawScene()
+{
+    clearCanvas();
+
+    for(int i=0;i<objectCount;i++)
+    {
+        Shape s = objects[i];
+
+        switch(s.type)
+        {
+            case LINE:
+                drawLine(
+                    s.x1,s.y1,
+                    s.x2,s.y2);
+                break;
+
+            case RECTANGLE:
+                drawRectangle(
+                    s.x1,s.y1,
+                    s.x2,s.y2);
+                break;
+
+            case CIRCLE:
+                drawCircle(
+                    s.x1,s.y1,
+                    s.radius);
+                break;
+
+            case TRIANGLE:
+                drawTriangle(
+                    s.x1,s.y1,
+                    s.x2,s.y2,
+                    s.x3,s.y3);
+                break;
+        }
+    }
+}
