@@ -3,6 +3,7 @@
 
 #define WIDTH 80
 #define HEIGHT 25
+#define MAX_OBJECTS 100
 
 extern char canvas[HEIGHT][WIDTH];
 
