@@ -2,7 +2,9 @@
 
 ## Description
 
-This project is a menu-driven 2D Graphics Editor implemented in C using a 2D character array as the drawing canvas. The canvas is initialized with `_` (underscore) characters, and graphical objects are drawn using `*` (asterisk) characters.
+This project is a menu-driven 2D Graphics Editor developed in C using a 2D character array as the drawing canvas.
+
+The canvas is initialized with `_` (underscore) characters, and graphical objects are drawn using `*` (asterisk) characters. The program allows users to create different geometric shapes and display them on the canvas through a simple menu-driven interface.
 
 ## Features
 
@@ -10,28 +12,25 @@ This project is a menu-driven 2D Graphics Editor implemented in C using a 2D cha
 * Draw Rectangle
 * Draw Circle
 * Draw Triangle
-* Display Drawing Canvas
-* Menu-Driven Interface
-* Implemented using a 2D Character Array
+* Display the Canvas
+* Menu-Driven User Interface
+* Uses a 2D Character Array for Drawing
 
-## Technologies Used
+## Working
 
-* C Programming Language
+1. The canvas is created as a 2D array of characters.
+2. Initially, all positions contain `_`.
+3. Users select options from the menu.
+4. Shapes are drawn using `*`.
+5. The canvas is displayed after drawing operations.
+
+## Concepts Used
+
+* C Programming
 * Arrays
 * Functions
 * Structures
-
-## How to Compile
-
-```bash
-gcc MAIN.C -o editor
-```
-
-## How to Run
-
-```bash
-./editor
-```
+* Menu-Driven Programming
 
 ## Project Structure
 
@@ -39,15 +38,6 @@ gcc MAIN.C -o editor
 MAIN.C
 README.md
 ```
-
-## Sample Operations
-
-1. Draw a Line
-2. Draw a Rectangle
-3. Draw a Circle
-4. Draw a Triangle
-5. Display Canvas
-6. Exit
 
 ## Author
 
