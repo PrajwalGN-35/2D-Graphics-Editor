@@ -28,17 +28,18 @@ int nextId = 1;
 
 // --- CANVAS MANAGEMENT ---
 
-// Clears the buffer array with empty spaces
+// Clears the buffer array with underscores as required by the problem sheet
 void clearCanvas() {
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
-            canvas[i][j] = ' ';
+            canvas[i][j] = '_'; 
         }
     }
 }
 
 // Renders the buffer grid to the actual terminal screen
 void displayCanvas() {
+    printf("\n");
     // Top Border
     for (int j = 0; j < WIDTH + 2; j++) printf("-");
     printf("\n");
@@ -59,7 +60,7 @@ void displayCanvas() {
 // Internal pixel plotter that respects canvas boundaries
 void setPixel(int x, int y) {
     if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT) {
-        canvas[y][x] = '*';
+        canvas[y][x] = '*'; // Graphical objects drawn using asterisks
     }
 }
 
@@ -82,9 +83,9 @@ void drawLine(int x0, int y0, int x1, int y1) {
 
 // Rectangle using 4 straight lines
 void drawRectangle(int x, int y, int w, int h) {
-    drawLine(x, y, x + w - 1, y);             // Top
+    drawLine(x, y, x + w - 1, y);                 // Top
     drawLine(x, y + h - 1, x + w - 1, y + h - 1); // Bottom
-    drawLine(x, y, x, y + h - 1);             // Left
+    drawLine(x, y, x, y + h - 1);                 // Left
     drawLine(x + w - 1, y, x + w - 1, y + h - 1); // Right
 }
 
@@ -121,7 +122,7 @@ void drawCircle(int xc, int yc, int r) {
 
 // --- CORE OBJECT MANAGER ---
 
-// Clears grid and loops over tracked array to assemble final layout
+// Clears grid to underscores and loops over tracked array to re-render layout
 void redrawCanvas() {
     clearCanvas();
     for (int i = 0; i < shapeCount; i++) {
@@ -161,7 +162,7 @@ void printObjects() {
     printf("-----------------------------\n");
 }
 
-// Modifies metadata coordinates for a targeted unique ID
+// Modifies elements for a targeted unique ID
 void modifyShape() {
     int targetId, foundIndex = -1;
     printObjects();
@@ -203,7 +204,7 @@ void modifyShape() {
     redrawCanvas();
 }
 
-// Drops an element from the tracker array and compacts data indices
+// Drops an element from the array and shifts data down
 void deleteShape() {
     int targetId, foundIndex = -1;
     printObjects();
@@ -231,18 +232,18 @@ void deleteShape() {
     redrawCanvas();
 }
 
-// --- MAIN RUNTIME TERMINAL SYSTEM ---
+// --- MAIN RUNTIME INTERACTIVE MENU ---
 
 int main() {
     int choice;
     clearCanvas();
 
     while (1) {
-        printf("\n=== 2D VECTOR GRAPHICS ENGINE ===\n");
-        printf("1. Draw Line\n");
-        printf("2. Draw Rectangle\n");
-        printf("3. Draw Triangle\n");
-        printf("4. Draw Circle\n");
+        printf("\n=== 2D VECTOR GRAPHICS EDITOR ===\n");
+        printf("1. Add Line\n");
+        printf("2. Add Rectangle\n");
+        printf("3. Add Triangle\n");
+        printf("4. Add Circle\n");
         printf("5. Modify an Object\n");
         printf("6. Delete an Object\n");
         printf("7. Wipe Canvas Clean\n");
@@ -256,11 +257,10 @@ int main() {
         }
 
         if (choice == 8) {
-            printf("Exiting Vector Engine. Goodbye!\n");
+            printf("Exiting Graphics Editor. Goodbye!\n");
             break;
         }
 
-        // Handle structural limits before appending
         if (choice >= 1 && choice <= 4 && shapeCount >= MAX_SHAPES) {
             printf("Error: Max shape storage limit reached!\n");
             continue;
