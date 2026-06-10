@@ -1,0 +1,111 @@
+==================================================
+PROMPT 1
+========
+
+Problem Statement:
+
+Design and implement a menu-driven 2D Graphics Editor in C using a 2D character array as the drawing canvas.
+
+What features should I implement and how should I design the project?
+
+==================================================
+ANSWER
+======
+
+Suggested using a 2D character array as the canvas, storing graphical objects using structures, assigning unique IDs to objects, and implementing line, rectangle, circle, and triangle drawing functions along with add, delete, modify, display, and redraw operations.
+
+==================================================
+PROMPT 2
+========
+
+gcc src/main.c src/graphics.c -o editor.exe
+
+After this it shows gcc not recognised.
+
+==================================================
+ANSWER
+======
+
+Explained how to install and use GCC through MSYS2 UCRT64 and how to invoke the compiler using the full path to gcc.exe.
+
+==================================================
+PROMPT 3
+========
+
+I pushed them into GitHub already.
+
+How can I verify that the files are uploaded correctly?
+
+==================================================
+ANSWER
+======
+
+Explained how to check the repository contents on GitHub, verify source files, README.md, commits, and repository visibility.
+
+==================================================
+PROMPT 4
+========
+
+What can I write in README.md?
+
+==================================================
+ANSWER
+======
+
+Provided project documentation including description, features, shapes supported, menu options, project structure, and author information.
+
+==================================================
+PROMPT 5
+========
+
+Now give me full README.md description that the program has been included to draw a line, rectangle, triangle, circle, and it can clear the complete shapes and modify the object, delete the object.
+
+==================================================
+ANSWER
+======
+
+Generated a complete README.md describing the graphics editor, supported shapes, add/delete/modify operations, redraw functionality, data structures, menu options, and project structure.
+
+==================================================
+PROMPT 6
+========
+
+How can I change the code of README.md in GitHub?
+
+==================================================
+ANSWER
+======
+
+Explained how to edit README.md directly on GitHub using the web editor and alternatively how to modify it locally and push the changes using Git.
+
+==================================================
+PROMPT 7
+========
+
+For the Mini Project, students may use any Generative AI tool of their choice. However, students must copy all the prompts used to interact with the GenAI tool, along with the corresponding responses, into a text file named prompt.txt.
+
+What should I do?
+
+==================================================
+ANSWER
+======
+
+Explained the purpose of prompt.txt, how to document prompts and responses, how to create the file, and how to upload it to the GitHub repository.
+
+==================================================
+PROMPT 8
+========
+
+Now give me a description about prompts and how the code I get it and understood by me.
+
+==================================================
+ANSWER
+======
+
+Provided a development approach description explaining the use of AI-assisted guidance, learning of algorithms and data structures, testing, modification of code, and understanding of the implementation.
+
+==================================================
+NOTE
+====
+
+This file contains selected prompts used during development of the mini project and summaries of the corresponding AI responses.
