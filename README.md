@@ -80,6 +80,29 @@ Project Structure
 
 MAIN.C
 README.md
+Development Approach
+
+The project was developed by studying the problem statement and implementing the required features step by step in C.
+
+During development, I referred to programming documentation, online resources, and AI-assisted tools to understand concepts such as:
+
+- 2D character arrays as a drawing canvas
+- Drawing lines, rectangles, circles, and triangles
+- Using structures to store graphical objects
+- Menu-driven program design
+- Object addition, deletion, and modification
+- Redrawing the canvas after updates
+
+The implementation was tested and refined by experimenting with different inputs and understanding how each function worked. The code was reviewed and modified to match the assignment requirements, and the final version was organized into a GitHub repository with proper documentation.
+
+Through this project, I gained practical experience with:
+
+- C programming
+- Arrays and structures
+- Functions
+- Menu-driven applications
+- Basic graphics representation using character arrays
+- Git and GitHub version control
 
 Author
 
