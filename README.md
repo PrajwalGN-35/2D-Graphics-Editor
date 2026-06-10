@@ -81,24 +81,7 @@ Project Structure
 MAIN.C
 README.md
  
-Prompts for Mini project 
-Day 1 Prompt – Canvas Creation﻿
-Create a C program for a 2D Graphics Editor using a 2D character array. Initialize a canvas of size 20x40 with underscore (_) characters and write a function to display the canvas on the screen. Keep the program simple and modular using separate functions for initialization and display.﻿
 
-Day 2 Prompt – Line Drawing﻿
-Extend the existing 2D Graphics Editor in C. Add a function called drawLine() that draws a horizontal line on the canvas using the '*' character. The function should accept row number, starting column and ending column as parameters. Display the updated canvas after drawing the line.﻿
-
-Day 3 Prompt – Rectangle Drawing﻿
-Improve the existing graphics editor by adding a drawRectangle() function. The rectangle should be drawn using '*' characters on the boundary only. The function should accept row, column, height and width as parameters. Keep the canvas stored in a 2D character array.﻿
-
-Day 4 Prompt – Triangle and CircleCircle﻿
-Enhance the graphics editor by adding functions to draw a triangle and a circle on the character canvas. Use '*' for drawing and '_' for empty space. Ensure that the shapes remain within the canvas boundaries. Display the canvas after drawing the shapes.﻿
-
-Day 5 Prompt – Shape Storage﻿
-Modify the graphics editor to support multiple graphical objects. Create a structure named Shape containing fields such as shape ID, shape type, coordinates and parameters. Store all shapes in an array of structures and implement a redrawCanvas() function that redraws all active shapes whenever the canvas is refreshed.﻿
-
-Day 6 Prompt – Final Menu Driven Editor﻿
-Complete the 2D Graphics Editor in C by creating a menu-driven interface. Allow users to add shapes, display the canvas, delete shapes, modify existing shapes, list all stored shapes and clear the canvas. Use unique IDs for shapes and maintain all graphical objects using structures and a redrawCanvas() function.
 
 Author
 
